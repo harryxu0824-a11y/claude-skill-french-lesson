@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leçon 015 · Le transport 交通 — 学习页 v2</title>
+<style>
+  :root{
+    --bg:#faf7f2; --card:#ffffff; --ink:#2b2b2b; --accent:#c94f7c;
+    --accent2:#3a6ea5; --hl:#fff3c4; --line:#e8e0d4; --green:#3d8b6d; --gold:#b07d2b;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;padding:24px 16px 80px;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,"PingFang SC","Helvetica Neue",Arial,sans-serif;line-height:1.75;}
+  main{max-width:880px;margin:0 auto;}
+  h1{font-size:1.6rem;margin:0 0 4px;}
+  .sub{color:#8a8378;margin-bottom:20px;font-size:.95rem;}
+  nav.toc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 20px;margin-bottom:22px;font-size:.92rem;}
+  nav.toc a{color:var(--accent2);text-decoration:none;margin-right:14px;white-space:nowrap;}
+  section{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:22px 24px;margin-bottom:22px;box-shadow:0 1px 3px rgba(0,0,0,.04);}
+  h2{font-size:1.15rem;margin:0 0 14px;color:var(--accent);display:flex;align-items:center;gap:8px;}
+  h3{font-size:1rem;margin:18px 0 8px;color:var(--accent2);}
+  .fr{font-family:Georgia,"Times New Roman",serif;font-size:1.06em;}
+  .speaker{color:var(--accent2);font-weight:600;}
+  .hl{background:var(--hl);border-radius:3px;padding:0 3px;}
+  .zh{color:#8a8378;font-size:.9em;}
+  audio{width:100%;margin:6px 0 4px;}
+  .speed{display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap;align-items:center;}
+  .speed span{font-size:.85rem;color:#8a8378;}
+  .speed button{border:1px solid var(--line);background:#f6f1e8;border-radius:20px;
+    padding:4px 14px;font-size:.9rem;cursor:pointer;}
+  .speed button.on{background:var(--accent);color:#fff;border-color:var(--accent);}
+  details{margin:10px 0;border:1px dashed var(--line);border-radius:10px;padding:10px 14px;background:#fdfbf7;}
+  summary{cursor:pointer;font-weight:600;color:var(--accent2);}
+  table{border-collapse:collapse;width:100%;margin:8px 0;font-size:.95rem;}
+  th,td{border:1px solid var(--line);padding:6px 10px;text-align:left;vertical-align:top;}
+  th{background:#f6f1e8;}
+  .tip{background:#eef4fa;border-left:4px solid var(--accent2);padding:10px 14px;border-radius:0 8px 8px 0;margin:10px 0;font-size:.93rem;}
+  .key{background:#fdf6e9;border:1px solid #ecd9b0;border-radius:12px;padding:14px 18px;margin:10px 0;}
+  .key b.pat{color:var(--gold);}
+  .hw li{margin-bottom:14px;}
+  .hw .fr{color:var(--green);}
+  code{background:#f3ede2;border-radius:4px;padding:1px 6px;font-size:.92em;}
+  .dialogue p{margin:6px 0;}
+  .stats{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0;}
+  .stats div{background:#f6f1e8;border-radius:8px;padding:6px 12px;font-size:.9rem;}
+  .stats b{color:var(--accent);}
+  /* 点读 */
+  .w{cursor:pointer;border-radius:3px;transition:background .15s;}
+  .w:hover{background:#e8f0fa;}
+  .w:active{background:#cfe3f7;}
+  button.say{border:none;background:none;cursor:pointer;font-size:.95em;margin-right:4px;padding:0 2px;vertical-align:baseline;}
+  /* 遮中文自测 */
+  button.maskzh{border:1px solid var(--line);background:#f6f1e8;border-radius:20px;padding:4px 14px;font-size:.9rem;cursor:pointer;margin:4px 0 8px;}
+  button.maskzh.on{background:var(--green);color:#fff;border-color:var(--green);}
+  table.hidezh td:nth-child(2):not(.peek){background:#efe7d8;color:transparent;cursor:pointer;border-radius:4px;}
+  table.hidezh td:nth-child(2):not(.peek) *{visibility:hidden;}
+  .ttsnote{font-size:.85rem;color:#8a8378;margin:2px 0 10px;}
+  /* 精听 */
+  .dialogue p[data-s]{padding:3px 6px;border-radius:6px;margin:4px 0;}
+  .dialogue p.playing{background:#fdf0e3;box-shadow:inset 3px 0 0 var(--accent);}
+  .dialogue p.intro{opacity:.65;font-size:.9em;}
+  button.segbtn{border:1px solid var(--line);background:#f6f1e8;border-radius:6px;
+    cursor:pointer;font-size:.8em;padding:1px 7px;margin-right:4px;vertical-align:baseline;}
+  button.segbtn.on{background:var(--accent);color:#fff;border-color:var(--accent);}
+</style>
+</head>
+<body>
+<main>
+  <h1>Leçon 015 · Le transport 交通</h1>
+  <div class="sub">词汇 ×2 ｜ 听力 ×2 ｜ 阅读 ｜ 句型专题 ｜ 造句作业 —— TCF Canada 备考</div>
+  <div class="ttsnote">🔈 <b>点任意法语单词可发音</b>（系统法语音）；对话每句前 <b>▶ 播这一句原音 / 🔁 单句循环</b>（精听用，正在播的句子高亮）；造句答案前的 🔊 读整句。</div>
+
+  <nav class="toc">
+    <a href="#patterns">⭐ 句型总览</a>
+    <a href="#vocab1">词汇①</a>
+    <a href="#oral">听力·课文</a>
+    <a href="#vocab2">词汇②</a>
+    <a href="#lecture">阅读</a>
+    <a href="#grammar">句型专题</a>
+    <a href="#devoirs">Devoirs听力</a>
+    <a href="#hw">造句作业</a>
+  </nav>
+
+  <!-- ═══════════ 0. 本课句型总览 ═══════════ -->
+  <section id="patterns">
+    <h2>⭐ 本课必会句型（先看这里，学完回来自测）</h2>
+    <div class="key">
+      <p>① <b class="pat">S + V + en/à + 交通工具</b> —— <span class="fr">Je vais à l'université <span class="hl">en bus</span>. / J'y vais <span class="hl">à pied</span>.</span></p>
+      <p>② <b class="pat">Comment + 提问出行方式</b> —— <span class="fr"><span class="hl">Comment</span> tu vas à l'université ?</span></p>
+      <p>③ <b class="pat">prendre + le/la/les + 交通工具</b> —— <span class="fr">Je <span class="hl">prends le</span> métro <span class="hl">pour aller au</span> centre-ville.</span></p>
+      <p>④ <b class="pat">坐车指路四件套</b> —— <span class="fr">Tu <span class="hl">prends la ligne</span> 10 jusqu'à…, <span class="hl">direction</span>… / Tu <span class="hl">changes à</span> la station… / Tu <span class="hl">descends à</span> l'arrêt…</span></p>
+      <p>⑤ <b class="pat">jusqu'à + 时间/地点</b> —— <span class="fr">La ligne 2 fonctionne <span class="hl">jusqu'à</span> 4 h.</span></p>
+      <p>⑥ <b class="pat">quel/quelle + n. 提问</b> —— <span class="fr">Tu prends <span class="hl">quelle</span> ligne ? Il roule jusqu'à <span class="hl">quelle heure</span> ?</span></p>
+      <p>⑦ <b class="pat">步行问路/指路</b> —— <span class="fr"><span class="hl">Je cherche</span>… / Vous allez <span class="hl">tout droit</span>, vous <span class="hl">tournez à gauche</span>…</span></p>
+    </div>
+    <p class="zh">自测标准：每个句型不看例句能口头造一句 → 这课算过关。</p>
+  </section>
+
+  <!-- ═══════════ 1. 词汇① ═══════════ -->
+  <section id="vocab1">
+    <h2>🔤 ① Vocabulaire 词汇一（听力：La Braderie de Lille）</h2>
+    <table>
+      <tr><th>词 / 短语</th><th>中文</th><th>搭配 · 例句</th></tr>
+      <tr><td class="fr">la braderie [bradri]</td><td>旧货集市</td><td class="fr">= le marché aux puces <span class="zh">跳蚤市场</span></td></tr>
+      <tr><td class="fr">un arrêt</td><td>公交车站</td><td class="fr">descendre à l'arrêt… <span class="zh">在…站下车</span></td></tr>
+      <tr><td class="fr">rouler v.i.</td><td>（车）行驶</td><td class="fr">La voiture roule vite. / rouler <b>toute la nuit</b> <span class="zh">通宵运行</span></td></tr>
+      <tr><td class="fr">appeler v.t.</td><td>打电话</td><td class="fr">appeler qqn = téléphoner <b>à</b> qqn；appeler <b>pour</b>… <span class="zh">为…打电话</span></td></tr>
+      <tr><td class="fr">changer</td><td>改变；换乘</td><td class="fr">Tu changes à la station Jaurès.</td></tr>
+      <tr><td class="fr">pour prép.</td><td>为了；对于</td><td class="fr">pour qqn / qqch / inf. — C'est <b>pour aller</b> en France.</td></tr>
+      <tr><td class="fr">le retour</td><td>返程</td><td class="fr">Pour le retour, je fais comment ? <span class="zh">回程我怎么办？</span></td></tr>
+      <tr><td class="fr">la direction</td><td>方向</td><td class="fr">(en) direction (de)… <span class="zh">开往…方向</span></td></tr>
+      <tr><td class="fr">venir v.i.</td><td>来（≠aller）</td><td class="fr">venir en train</td></tr>
+      <tr><td class="fr">un itinéraire</td><td>路线</td><td class="fr">faire un/l'itinéraire <span class="zh">规划路线</span></td></tr>
+      <tr><td class="fr">le service</td><td>服务；运行</td><td class="fr">Le service des bus <b>continue</b>.</td></tr>
+      <tr><td class="fr">continuer v.t./v.i.</td><td>继续</td><td class="fr">continuer + n. / <b>à(de)</b> + inf. — La pluie continue.</td></tr>
+      <tr><td class="fr">jusqu'à prép.</td><td>直到</td><td class="fr">jusqu'à minuit / jusqu'<b>au</b> soir / jusqu'<b>en</b> 2029</td></tr>
+      <tr><td class="fr">la ligne</td><td>线路（+数词）</td><td class="fr">la ligne 2 <span class="zh">2号线</span>；Liane = Lille 的公交线</td></tr>
+      <tr><td class="fr">aussi</td><td>也</td><td class="fr">moi aussi / j'aime aussi… / c'est jusqu'à minuit <b>aussi</b> ?</td></tr>
+      <tr><td class="fr">fonctionner v.i.</td><td>运行，运作</td><td class="fr">Mon ordinateur ne fonctionne pas. <span class="zh">我电脑坏了</span></td></tr>
+      <tr><td class="fr">se déplacer</td><td>出行；移动</td><td class="fr">Le typhon se déplace vers le sud. / se déplacer à vélo</td></tr>
+    </table>
+    <h3>动词辨析（本课易混）</h3>
+    <p class="fr"><b>rouler</b>（车轮转→车在跑）｜ <b>fonctionner</b>（线路/机器在运转）｜ <b>continuer</b>（服务继续）｜ <b>se déplacer</b>（人出行）</p>
+    <p class="fr zh">Les bus <b>roulent</b> toute la nuit. → La ligne 2 <b>fonctionne</b> jusqu'à 4 h. → Le service <b>continue</b>. → Je <b>me déplace</b> en bus.</p>
+  </section>
+
+  <!-- ═══════════ 2. 课文听力 ═══════════ -->
+  <section id="oral">
+    <h2>🎧 ② Compréhension orale — La Braderie de Lille（piste 28）</h2>
+    <div class="speed"><span>倍速：</span>
+      <button data-for="a1" data-rate="0.7">0.7×</button>
+      <button data-for="a1" data-rate="0.8">0.8×（跟读）</button>
+      <button data-for="a1" data-rate="0.9">0.9×</button>
+      <button data-for="a1" data-rate="1" class="on">1.0×</button>
+    </div>
+    <audio id="a1" controls preload="metadata" src="{{AUDIO_BRADERIE}}"></audio>
+    <div class="tip">老师作业第4条 = <b>精听：听力断句跟读（0.8倍速）</b>。用法：点 0.8× → 点每句前的 <b>▶</b> 只播那一句（句尾自动停），跟读；没听清点 <b>🔁</b> 单句循环，听清为止再点一次关掉。正在播的句子会高亮。听第一遍先回答：Qui parle ? À qui ? L'homme téléphone pour quoi ?（答案：男士打给公交话务员，问 la nuit de la Braderie 的<b>回程 le retour</b>怎么走）</div>
+    <details open>
+      <summary>对话原文（重点表达已标黄）</summary>
+      <div class="dialogue fr">
+        <p class="intro zh" data-audio-line="a1" data-s="0" data-e="6">📢 Page 41, document F. La Braderie de Lille.（报幕）</p>
+        <p data-audio-line="a1" data-s="6" data-e="9.3"><span class="speaker">La standardiste :</span> Lilletransports, bonjour !</p>
+        <p data-audio-line="a1" data-s="9.3" data-e="14"><span class="speaker">L'homme :</span> Bonjour madame. <span class="hl">Je vous appelle pour</span> la nuit du samedi 5 septembre.</p>
+        <p data-audio-line="a1" data-s="14" data-e="16.1"><span class="speaker">La standardiste :</span> Ah oui, la nuit de la Braderie.</p>
+        <p data-audio-line="a1" data-s="16.1" data-e="22.1"><span class="speaker">L'homme :</span> Oui. Pour le retour, <span class="hl">je fais comment</span> ? <span class="hl">Il y a des</span> métros la nuit ?</p>
+        <p data-audio-line="a1" data-s="22.1" data-e="31"><span class="speaker">La standardiste :</span> Non, <span class="hl">il n'y a pas de</span> métros, mais le service des bus continue. Les bus 1 et 12 <span class="hl">roulent toute la nuit</span>.</p>
+        <p data-audio-line="a1" data-s="31" data-e="36"><span class="speaker">L'homme :</span> Ah, et le bus 18 ? Il roule <span class="hl">jusqu'à quelle heure</span> ?</p>
+        <p data-audio-line="a1" data-s="36" data-e="40"><span class="speaker">La standardiste :</span> Le 18… jusqu'à minuit, monsieur.</p>
+        <p data-audio-line="a1" data-s="40" data-e="44"><span class="speaker">L'homme :</span> D'accord, <span class="hl">la ligne 2</span>, c'est jusqu'à minuit <span class="hl">aussi</span> ?</p>
+        <p data-audio-line="a1" data-s="44" data-e="49.1"><span class="speaker">La standardiste :</span> Non, la ligne 2 <span class="hl">fonctionne jusqu'à</span> 4 h.</p>
+        <p data-audio-line="a1" data-s="49.1" data-e="53"><span class="speaker">L'homme :</span> Très bien ! Merci, madame, au revoir.</p>
+      </div>
+      <p class="zh">standardiste 话务员 ｜ je fais comment ? 我怎么办？（口语倒装省略）｜ 词汇配对：le bus <b>roule</b> · la ligne <b>fonctionne</b> · le service <b>continue</b></p>
+    </details>
+  </section>
+
+  <!-- ═══════════ 3. 词汇② ═══════════ -->
+  <section id="vocab2">
+    <h2>🔤 ③ Vocabulaire 词汇二（阅读：À pied ou en bus ?）</h2>
+    <table>
+      <tr><th>词 / 短语</th><th>中文</th><th>搭配 · 例句</th></tr>
+      <tr><td class="fr">un/le magazine</td><td>杂志</td><td class="fr">QuoMag, le magazine du quotidien</td></tr>
+      <tr><td class="fr">un/le quotidien</td><td>日常；日报</td><td class="zh">形容词=日常的</td></tr>
+      <tr><td class="fr">un moyen [mwajɛ̃] de transport</td><td>交通工具</td><td class="fr">Quels moyens de transport… ? <span class="zh">TCF 高频词</span></td></tr>
+      <tr><td class="fr">utiliser v.t.</td><td>使用（+n.）</td><td class="fr">Est-ce que vous utilisez l'ordinateur ?</td></tr>
+      <tr><td class="fr">répondre v.t.ind.</td><td>回答（<b>à</b> qn/qch）</td><td class="fr">Il répond <b>à</b> son professeur. / Il ne répond pas <b>à</b> la question.</td></tr>
+      <tr><td class="fr">infirmier / infirmière</td><td>男/女护士</td><td class="zh">职业阴阳性；同类：pharmacien / pharmacienne 药剂师</td></tr>
+      <tr><td class="fr">ensemble adv.</td><td>一起</td><td class="fr">Nous allons <b>ensemble</b> à l'hôpital.（副词放动词后）</td></tr>
+      <tr><td class="fr">plus + adj./adv.</td><td>更…</td><td class="fr">c'est <b>plus rapide</b> / La voiture roule <b>plus vite</b>.</td></tr>
+      <tr><td class="fr">bien sûr</td><td>当然</td><td class="fr">Moi, c'est le vélo, bien sûr !</td></tr>
+      <tr><td class="fr">aller au centre-ville</td><td>去市中心</td><td class="fr">aller à l'hôpital / à l'école / au travail</td></tr>
+      <tr><td class="fr">tous les jours</td><td>每天</td><td class="fr">时间频率：le matin, le soir, le week-end, tous les jours</td></tr>
+      <tr><td class="fr">comme</td><td>像；作为（=as）</td><td class="fr">Elle chante comme une star. / Il est efficace comme directeur.</td></tr>
+    </table>
+  </section>
+
+  <!-- ═══════════ 4. 阅读 ═══════════ -->
+  <section id="lecture">
+    <h2>📰 ④ Compréhension écrite — À pied ou en bus ?（法国人早上怎么出行）</h2>
+    <div class="stats">
+      <div>en voiture <b>71%</b></div><div>à pied <b>39%</b></div><div>en bus <b>13%</b></div>
+      <div>à vélo <b>13%</b></div><div>en métro <b>12%</b></div><div>en train <b>6%</b></div><div>en scooter/à moto <b>3%</b></div>
+    </div>
+    <p class="zh">注意统计条里 en/à 的用法和文章标题的选择题答案：<span class="fr">Les moyens de transport des Français</span>。前三名 = voiture / pied / bus·vélo。</p>
+    <h3>四个人物的表达（阅读答案 + 口语素材）</h3>
+    <table>
+      <tr><td class="fr"><b>Jean & Sophia</b><br><span class="zh">护士/医生</span></td><td class="fr">« Nous, le matin, nous allons <span class="hl">ensemble</span> à l'hôpital <span class="hl">en voiture</span>, c'est <span class="hl">plus rapide</span>. »</td></tr>
+      <tr><td class="fr"><b>Sabrina</b><br><span class="zh">理发师</span></td><td class="fr">« Moi, c'est <span class="hl">le vélo</span> bien sûr ! Mais le week-end, je <span class="hl">prends le métro</span> pour aller au centre-ville. »</td></tr>
+      <tr><td class="fr"><b>Christophe</b><br><span class="zh">药剂师</span></td><td class="fr">« <span class="hl">Tous les jours</span>, je <span class="hl">prends le bus</span> pour aller au travail, j'aime beaucoup le bus et <span class="hl">aussi</span> le tramway ! »</td></tr>
+      <tr><td class="fr"><b>Émilie</b><br><span class="zh">教师</span></td><td class="fr">« Le matin, je vais à l'école <span class="hl">à pied</span>, <span class="hl">comme</span> les enfants ! »</td></tr>
+    </table>
+    <div class="tip">这四句就是 TCF 口语的现成模板：<b>Moi, c'est… / Tous les jours, je prends… pour aller… / c'est plus rapide</b>。把自己的通勤方式套进去背一段。</div>
+  </section>
+
+  <!-- ═══════════ 5. 句型专题 ═══════════ -->
+  <section id="grammar">
+    <h2>📖 ⑤ 句型专题（语法点展开）</h2>
+
+    <h3>1. en vs à + 交通工具（核心）</h3>
+    <table>
+      <tr><th>介词</th><th>逻辑</th><th>搭配</th></tr>
+      <tr><td><b>en</b></td><td>人在<b>里面</b>（à l'intérieur）</td><td class="fr">en bus (m.), en métro (m.), en taxi (m.), en train (m.), en tramway (m.), en voiture (f.), en avion, en bateau, en scooter (m.)</td></tr>
+      <tr><td><b>à</b></td><td>人在<b>上面</b>骑（sur）或步行</td><td class="fr">à vélo (m.), à moto (f.), à cheval, à pied (m.)</td></tr>
+    </table>
+    <p class="zh">句型 <code>S + V + en/à + n.</code>（方式状语），动词用 aller / partir / rentrer / venir / voyager / se déplacer / se rendre。提问：<span class="fr"><b>Comment</b> tu vas à l'université ? — J'y vais en bus.</span></p>
+
+    <h3>2. prendre + le/la/l'/les + 交通工具</h3>
+    <p class="fr">Je <span class="hl">prends le</span> bus / <span class="hl">le</span> métro / <span class="hl">la</span> ligne 2 <span class="hl">pour aller au</span> travail.</p>
+    <p class="zh">和句型1的区别：prendre 是"乘坐"，后面<b>必须带定冠词</b>；en/à 结构不带冠词。两种说法都要会。</p>
+
+    <h3>3. 坐地铁/公交指路（课本 p.40 表达框，Devoirs 排序题就考这个）</h3>
+    <table>
+      <tr><td class="fr">Pour aller à …</td><td class="zh">要去…的话</td></tr>
+      <tr><td class="fr">Tu prends la ligne 10 <b>jusqu'à</b>…, (en) <b>direction</b> (de)…</td><td class="zh">乘10号线到…，朝…方向</td></tr>
+      <tr><td class="fr">Tu <b>changes à</b> la station…</td><td class="zh">在…站换乘</td></tr>
+      <tr><td class="fr">Tu <b>descends à</b> l'arrêt / à la station…</td><td class="zh">在…站下车</td></tr>
+    </table>
+    <p class="zh">Devoirs 排序题参考顺序（Vieux-Centre → Aéroport）：prends la ligne D → changes à Jaurès → prends la ligne B → descends à République → tramway 3 jusqu'à l'aéroport（b-e-d-a-c）。</p>
+
+    <h3>4. 步行问路 / 指路（Devoirs 听力 piste 10）</h3>
+    <table>
+      <tr><th>问路</th><td class="fr">Je cherche… / Pour aller à…, s'il vous plaît ? / Vous pouvez m'aider ?</td></tr>
+      <tr><th>指路</th><td class="fr">Vous <b>traversez</b> la place… → vous allez <b>tout droit</b> → vous <b>tournez à gauche/droite</b> dans la rue… → vous <b>marchez pendant</b> 50 mètres → vous <b>arrivez à/au</b>… → c'est <b>à droite/gauche de</b>…</td></tr>
+    </table>
+
+    <h3>5. 疑问形容词 quel（与名词性数配合，发音都是 [kɛl]）</h3>
+    <table>
+      <tr><th></th><th>单数</th><th>复数</th></tr>
+      <tr><th>阳性</th><td class="fr">Tu prends <b>quel</b> bus ? / Tu descends à <b>quel</b> arrêt ?</td><td class="fr">Il prend <b>quels</b> transports ?</td></tr>
+      <tr><th>阴性</th><td class="fr"><b>Quelle</b> ligne ? / jusqu'à <b>quelle</b> heure ? / à <b>quelle</b> adresse ?</td><td class="fr">Elles tournent dans <b>quelles</b> rues ?</td></tr>
+    </table>
+
+    <h3>6. jusqu'à — 直到（时间 / 地点通用）</h3>
+    <p class="fr">jusqu'à minuit ｜ jusqu'à Paris ｜ du matin <span class="hl">jusqu'au</span> soir（à+le→au）｜ <span class="hl">jusqu'en</span> été / jusqu'en 2029（年份、季节用 en）｜ jusqu'à présent <span class="zh">直到现在</span></p>
+
+    <h3>7. 零散但会考的小点</h3>
+    <p class="fr">il y a… / il n'y a pas <b>de</b>…（否定后 des→de）｜ pour + n./inf. ｜ plus + adj./adv. ｜ répondre <b>à</b> qn ｜ ensemble 放动词后 ｜ comme 三个用法（像/如同/作为）｜ 时间频率 le matin · le week-end · tous les jours</p>
+  </section>
+
+  <!-- ═══════════ 6. Devoirs 听力 ═══════════ -->
+  <section id="devoirs">
+    <h2>🎧 ⑥ Devoirs 听力 — Demander / Indiquer le chemin 问路（piste 10）</h2>
+    <div class="speed"><span>倍速：</span>
+      <button data-for="a2" data-rate="0.7">0.7×</button>
+      <button data-for="a2" data-rate="0.8">0.8×（跟读）</button>
+      <button data-for="a2" data-rate="0.9">0.9×</button>
+      <button data-for="a2" data-rate="1" class="on">1.0×</button>
+    </div>
+    <audio id="a2" controls preload="metadata" src="{{AUDIO_DEVOIRS}}"></audio>
+    <div class="tip">做题顺序：先<b>只听</b>完成 Devoirs 连线题（a–f 配 1–6），再听第二遍在地图上画路线，最后才展开原文核对。连线时注意动词和介词的绑定：tourner→à gauche，arriver→au，marcher→pendant。</div>
+    <details>
+      <summary>对话原文（做完题再看）</summary>
+      <div class="dialogue fr">
+        <p class="intro zh" data-audio-line="a2" data-s="0" data-e="7.7">📢 Page 14. Communication. Demander / Indiquer le chemin.（报幕）</p>
+        <p data-audio-line="a2" data-s="10.8" data-e="18.7"><span class="speaker">La femme :</span> Bonjour, <span class="hl">je cherche</span> le n°10 du boulevard Lavoisier, <span class="hl">vous pouvez m'aider</span> ?</p>
+        <p data-audio-line="a2" data-s="18.7" data-e="23.7"><span class="speaker">L'homme :</span> Oui, <span class="hl">vous traversez</span> la place Marie Curie.</p>
+        <p data-audio-line="a2" data-s="23.7" data-e="27.3"><span class="hl">Vous allez tout droit</span>, dans la rue de France,</p>
+        <p data-audio-line="a2" data-s="27.3" data-e="32">ensuite, <span class="hl">vous tournez à gauche</span> dans la rue de l'Épeautre,</p>
+        <p data-audio-line="a2" data-s="32" data-e="35.2"><span class="hl">vous marchez pendant 50 mètres</span>,</p>
+        <p data-audio-line="a2" data-s="35.2" data-e="38.2"><span class="hl">vous arrivez au</span> boulevard Lavoisier.</p>
+        <p data-audio-line="a2" data-s="38.2" data-e="41.2">C'est ici, <span class="hl">à droite de</span> la boulangerie.</p>
+      </div>
+      <p class="zh">连线答案：a-5（marchez pendant 50 mètres）· b-4（tournez à gauche dans la rue de l'Épeautre）· c-3（traversez la place Marie Curie）· d-1（allez tout droit dans la rue de France）· e-2（arrivez au boulevard Lavoisier）· f-6（c'est ici, à droite de la boulangerie）</p>
+    </details>
+  </section>
+
+  <!-- ═══════════ 7. 造句作业 ═══════════ -->
+  <section id="hw">
+    <h2>✍️ ⑦ 造句作业（10题，先口头说再写，写完看答案）</h2>
+    <ol class="hw">
+      <li>用 <code>tous les jours + prendre</code>：说"我每天坐公交去上班"。
+        <details><summary>参考答案</summary><span class="fr">Tous les jours, je prends le bus pour aller au travail.</span></details></li>
+      <li>用 <code>ensemble + en voiture + plus rapide</code>：说"我们一起开车去医院，这样更快"。
+        <details><summary>参考答案</summary><span class="fr">Nous allons ensemble à l'hôpital en voiture, c'est plus rapide.</span></details></li>
+      <li>用 <code>à + 交通工具 + comme</code>：说"早上我像孩子们一样走路去学校"。
+        <details><summary>参考答案</summary><span class="fr">Le matin, je vais à l'école à pied, comme les enfants.</span></details></li>
+      <li>用 <code>quelle</code> 提问：问"你坐哪条地铁线？"
+        <details><summary>参考答案</summary><span class="fr">Tu prends quelle ligne de métro ?</span></details></li>
+      <li>用 <code>quel</code> 提问：问"你在哪一站下车？"（arrêt m.）
+        <details><summary>参考答案</summary><span class="fr">Tu descends à quel arrêt ?</span></details></li>
+      <li>用 <code>fonctionner + jusqu'à</code>：说"2号线运行到凌晨4点"。
+        <details><summary>参考答案</summary><span class="fr">La ligne 2 fonctionne jusqu'à 4 heures.</span></details></li>
+      <li>用 <code>jusqu'en</code>：说"我在加拿大学习到2029年"。
+        <details><summary>参考答案</summary><span class="fr">Je fais mes études au Canada jusqu'en 2029.</span></details></li>
+      <li>用 <code>il n'y a pas de… mais…</code>：说"夜里没有地铁，但公交服务继续"。
+        <details><summary>参考答案</summary><span class="fr">Il n'y a pas de métros la nuit, mais le service des bus continue.</span></details></li>
+      <li>问路：说"您好，我找 Lavoisier 大道10号，您能帮我吗？"
+        <details><summary>参考答案</summary><span class="fr">Bonjour, je cherche le n°10 du boulevard Lavoisier, vous pouvez m'aider ?</span></details></li>
+      <li>指路（连用3个动作 + 换乘句型）：说"你乘D线到 Jaurès 站换乘，然后在 République 站下车"。
+        <details><summary>参考答案</summary><span class="fr">Tu prends la ligne D, tu changes à la station Jaurès, et tu descends à la station République.</span></details></li>
+    </ol>
+    <div class="tip">写完可以把10句发回给 Claude 批改（拼写、性数配合、介词），比只对答案有效。</div>
+  </section>
+</main>
+
+<script>
+/* ── 音频倍速 ── */
+document.querySelectorAll('.speed button').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const audio=document.getElementById(btn.dataset.for);
+    audio.playbackRate=parseFloat(btn.dataset.rate);
+    if('preservesPitch' in audio) audio.preservesPitch=true;
+    btn.closest('.speed').querySelectorAll('button').forEach(b=>b.classList.remove('on'));
+    btn.classList.add('on');
+  });
+});
+
+/* ── 法语 TTS（系统语音，零依赖）── */
+const synth=window.speechSynthesis;let frVoice=null;
+function pickVoice(){
+  const vs=synth?synth.getVoices():[];
+  frVoice=vs.find(v=>v.lang==='fr-FR'&&/Am[ée]lie|Thomas|Audrey/i.test(v.name))
+        ||vs.find(v=>v.lang==='fr-FR')||vs.find(v=>v.lang.startsWith('fr'))||null;
+}
+if(synth){pickVoice();if(synth.onvoiceschanged!==undefined)synth.onvoiceschanged=pickVoice;}
+function speak(text,rate){
+  if(!synth||!text)return;synth.cancel();
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang='fr-FR';if(frVoice)u.voice=frVoice;u.rate=rate||0.9;
+  synth.speak(u);
+}
+
+/* 把 .fr 里的法语单词包成可点击 span（跳过中文注释 .zh）*/
+function wrapWords(node){
+  [...node.childNodes].forEach(child=>{
+    if(child.nodeType===3){
+      if(!/[A-Za-zÀ-ÿœŒ]/.test(child.textContent))return;
+      const frag=document.createDocumentFragment();
+      child.textContent.split(/(\s+|\/|｜)/).forEach(tok=>{
+        if(/[A-Za-zÀ-ÿœŒ]{2,}/.test(tok)){
+          const s=document.createElement('span');s.className='w';s.textContent=tok;frag.appendChild(s);
+        }else frag.appendChild(document.createTextNode(tok));
+      });
+      child.replaceWith(frag);
+    }else if(child.nodeType===1&&!child.classList.contains('zh')&&!child.classList.contains('say')&&child.tagName!=='BUTTON'&&child.tagName!=='AUDIO'){
+      wrapWords(child);
+    }
+  });
+}
+document.querySelectorAll('.fr').forEach(wrapWords);
+document.addEventListener('click',e=>{
+  if(e.target.classList&&e.target.classList.contains('w')){
+    speak(e.target.textContent.replace(/[.,!?;:«»()…"']/g,'').trim(),0.8);
+  }
+});
+
+/* 造句参考答案：句首加 🔊 读整句（TTS） */
+document.querySelectorAll('.hw details .fr').forEach(el=>{
+  const b=document.createElement('button');b.className='say';b.type='button';b.textContent='🔊';b.title='读整句';
+  b.addEventListener('click',ev=>{
+    ev.stopPropagation();
+    const c=el.cloneNode(true);
+    c.querySelectorAll('.speaker,.zh,.say').forEach(x=>x.remove());
+    speak(c.textContent.replace(/\s+/g,' ').trim(),0.85);
+  });
+  el.insertBefore(b,el.firstChild);
+});
+
+/* ── 精听：逐句播放原音频（时间戳来自本地 whisper 对齐）── */
+let loopBtn=null;
+function clearLoop(){
+  if(loopBtn){loopBtn.classList.remove('on');loopBtn=null;}
+}
+document.querySelectorAll('.dialogue p[data-s]').forEach(p=>{
+  const aid=p.dataset.audioLine,s=parseFloat(p.dataset.s),e=parseFloat(p.dataset.e);
+  const play=document.createElement('button');play.className='segbtn';play.type='button';play.textContent='▶';play.title='播这一句';
+  play.addEventListener('click',ev=>{
+    ev.stopPropagation();clearLoop();
+    const a=document.getElementById(aid);
+    a._segEnd=e;a._segStart=s;a._loop=false;
+    a.currentTime=s;a.play();
+  });
+  const loop=document.createElement('button');loop.className='segbtn';loop.type='button';loop.textContent='🔁';loop.title='单句循环';
+  loop.addEventListener('click',ev=>{
+    ev.stopPropagation();
+    const a=document.getElementById(aid);
+    if(loopBtn===loop){a.pause();a._segEnd=null;a._loop=false;clearLoop();return;}
+    clearLoop();loopBtn=loop;loop.classList.add('on');
+    a._segEnd=e;a._segStart=s;a._loop=true;
+    a.currentTime=s;a.play();
+  });
+  p.insertBefore(loop,p.firstChild);
+  p.insertBefore(play,p.firstChild);
+});
+document.querySelectorAll('audio').forEach(a=>{
+  a.addEventListener('timeupdate',()=>{
+    if(a._segEnd!=null&&a.currentTime>=a._segEnd){
+      if(a._loop){a.currentTime=a._segStart;}
+      else{a.pause();a._segEnd=null;}
+    }
+    document.querySelectorAll('.dialogue p[data-audio-line="'+a.id+'"]').forEach(p=>{
+      const s=parseFloat(p.dataset.s),e=parseFloat(p.dataset.e);
+      p.classList.toggle('playing',!a.paused&&a.currentTime>=s&&a.currentTime<e);
+    });
+  });
+  a.addEventListener('pause',()=>{
+    document.querySelectorAll('.dialogue p[data-audio-line="'+a.id+'"]').forEach(p=>p.classList.remove('playing'));
+  });
+  /* 拖进度条 = 退出单句模式 */
+  a.addEventListener('seeking',()=>{
+    if(a._segEnd!=null&&(a.currentTime<a._segStart-0.5||a.currentTime>a._segEnd+0.5)){
+      a._segEnd=null;a._loop=false;clearLoop();
+    }
+  });
+});
+
+/* 词汇表：遮住中文自测（点被遮的格子可偷看）*/
+document.querySelectorAll('#vocab1 table, #vocab2 table').forEach(tbl=>{
+  if(!tbl.querySelector('th'))return;
+  const b=document.createElement('button');b.className='maskzh';b.type='button';b.textContent='🙈 遮住中文自测';
+  b.addEventListener('click',()=>{
+    tbl.classList.toggle('hidezh');b.classList.toggle('on');
+    b.textContent=tbl.classList.contains('hidezh')?'👀 显示中文':'🙈 遮住中文自测';
+    if(!tbl.classList.contains('hidezh'))tbl.querySelectorAll('td.peek').forEach(td=>td.classList.remove('peek'));
+  });
+  tbl.parentNode.insertBefore(b,tbl);
+});
+document.addEventListener('click',e=>{
+  const td=e.target.closest?e.target.closest('table.hidezh td:nth-child(2)'):null;
+  if(td)td.classList.toggle('peek');
+});
+</script>
+</body>
+</html>
